@@ -1,0 +1,381 @@
+/* Imports the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+body {
+    background: url('img/download\ \(2\).jpeg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: rgb(27, 27, 65);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 600;
+}
+
+.nav a {
+    font-size: 1.2rem;
+    color: white;
+    margin-left: 1.5rem;
+    transition: 0.4s;
+}
+
+.nav a:hover {
+    color: rgb(27, 27, 82);
+}
+
+/* Seção de Sobre Mim */
+section {
+    min-height: 100vh;
+    padding: 6rem 6rem 2rem;
+}
+
+.home .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-img, .profile-img, .project-img {
+    max-width: 50%;
+    width: 100%;
+    border-right: solid 0.6rem rgb(15, 15, 55);
+    border-bottom: solid 0.6rem rgb(22, 22, 61);
+    border-image: linear-gradient(red, blue) 1;
+}
+
+.about-text, .project-text, .profile-text {
+    max-width: 50%;
+    padding-left: 2rem;
+}
+
+.about-text h1, .profile-text h1, .project-text h3, .skills h2 {
+    font-size: 2.5rem;
+}
+
+.about-text p, .project-text p, .skills p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+/* Seção de Projetos */
+#projects {
+    padding: 2rem 6rem;
+}
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Seção de Habilidades */
+#skills {
+    padding: 2rem 6rem;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Seção de Contato */
+#contact {
+    padding: 2rem 6rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 0.8rem 2rem;
+    background-color: rgb(27, 27, 65);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #1e90ff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+
+button:hover {
+    background-color: rgb(27, 27, 82);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 2rem;
+    }
+
+    .home .about, .project {
+        flex-direction: column;
+    }
+
+    .about-text, .about-img, .project-text, .project-img {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .nav a {
+        font-size: 1rem;
+    }
+}
+
+
+/* Ajustes globais para imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: brightness(1.2);
+}
+
+
+
+/* Estilos específicos para imagens nas seções */
+.about-img, .profile-img, .project-img {
+    max-width: 30%;
+    width: 100%;
+    height: auto;
+    border-right: solid 0.6rem rgb(15, 15, 55);
+    border-bottom: solid 0.6rem rgb(22, 22, 61);
+    border-image: linear-gradient(red, blue) 1;
+}
+
+/* Ajuste para dispositivos menores */
+@media (max-width: 768px) {
+    .about-img, .profile-img, .project-img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Efeitos para as habilidades */
+.skills {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.skill h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.skill {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(27, 27, 65, 0.8);
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #ff4757, #1e90ff);
+}
+
+.skill i {
+    font-size: 3rem;
+    color: #ff4757;
+    margin-bottom: 1rem;
+    transition: color 0.4s;
+}
+
+.skill:hover i {
+    color: #fff;
+}
+
+
+.skill p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Responsividade para habilidades */
+@media (max-width: 768px) {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+section {
+    background: linear-gradient(135deg, #353130, #1e90ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: white;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: border-color 0.4s ease;
+}
+
+.skill::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    border: 2px solid #ff4757;
+    transition: top 0.4s ease, left 0.4s ease;
+}
+
+.skill:hover::before {
+    top: 0;
+    left: 0;
+}
